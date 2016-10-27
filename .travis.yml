@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - 'node'
+addons:
+  sauce_connect:
+    username: "simonseyock"
+  jwt:
+    secure: "bfniUIqqMctJkE6BKCaIJ7dnkYJsOImxJgnYkqN7t9umVsIhRoqppBFnrrn3rnlGcv5Nxm/36/hDPFcXNceVVlaD4+/kyWQiCFx+/0mdklczl96XjltCa/fDID+DSBkmZUNbuprJO7j3aH2cLocpolzd2E/Rjp/x3kZr2igI02tJHWiGJ+dxYutixpn6lehzFT8IWrj+zf/H6aOAF48YeYZiekIUPsg4Sr0rfbHe3CVLFS0kHofXfv/Gnr5+18efwTuz7UskL729ltzhEOUuscPUxqBhyAa3tVQZSJ72pFxrFzLkivTOWBEsbJyHHnJoa+bDKHgQ3GGPtL2FnY4EvAZrDcpIuAuucRE94uCOoKK7mC0a5/mec7Wz5K+7QmtwIq4DnqPb50/+wlk6efRgWYDTeWU295TlPItxMelu6lZbfe0eglS8mWVfV4TokUIydwPEL288QNkF2O/NCRBLPX15MFApXyQaQrZc6x5h9GTt9VLcF7+Thkp7t4Js8DgECZEzKoAkUJwlW/Zdr16CR8PaVKS2PuUNEYRMgx7WoAv+6r4W2uQ8D4F7maC4+NuzxBJFJGVf/qA9YoU/RryZm1ttkOTK4LH7G0FcFHAxwdD7nTCaV0VlZFnIBU0ExeACtY3Wenf2Z3M68dy+hO3pmB97uQe9miOkZ/uH4nQYBic="
