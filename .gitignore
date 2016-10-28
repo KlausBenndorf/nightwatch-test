@@ -3,3 +3,4 @@ screenshots/
 reports/
 node_modules/
 *.log
+.idea/

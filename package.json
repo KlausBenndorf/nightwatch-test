@@ -4,7 +4,7 @@
   "description": "a test for nightwatch",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch"
+    "test": "nightwatch -e chrome,ie11,android_s4_emulator,iphone_6_simulator"
   },
   "author": "",
   "license": "MIT",

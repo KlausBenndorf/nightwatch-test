@@ -1,7 +1,7 @@
 var path = require('path')
 
 const PKG = require('./package.json');
-const BINPATH = path.join(process.cwd(), 'bin'); // change if required.
+const BINPATH = path.join(__dirname, 'bin'); // change if required.
 const SCREENSHOT_PATH = path.join(process.cwd(), 'screenshots', PKG.version);
 
 module.exports = {
@@ -9,15 +9,6 @@ module.exports = {
     "tests"
   ],
   "output_folder": "reports",
-  "selenium": {
-    "start_process": true,
-    "server_path": path.join(BINPATH, "selenium.jar"),
-    "host": "127.0.0.1",
-    "port": 4444, // standard selenium port
-    "cli_args": { // chromedriver is downloaded by selenium-download (see readme)
-      "webdriver.chrome.driver" : path.join(BINPATH, "chromedriver")
-    }
-  },
   "test_workers" : {"enabled" : true, "workers" : "auto"}, // perform tests in parallel where possible
   "test_settings": {
     "default": {
@@ -114,17 +105,17 @@ module.exports = {
   }
 };
 
-/**
- * selenium-download does exactly what it's name suggests;
- * downloads (or updates) the version of Selenium (& chromedriver)
- * on your localhost where it will be used by Nightwatch.
- */
-var selenium = require('selenium-download');
-
-selenium.ensure(BINPATH, function(error) {
-  if (error) throw new Error(error); // no point continuing so exit!
-  console.log('✔ Selenium & Chromedriver successfully updated');
-});
+// /**
+//  * selenium-download does exactly what it's name suggests;
+//  * downloads (or updates) the version of Selenium (& chromedriver)
+//  * on your localhost where it will be used by Nightwatch.
+//  */
+// var selenium = require('selenium-download');
+//
+// selenium.ensure(BINPATH, function(error) {
+//   if (error) throw new Error(error); // no point continuing so exit!
+//   console.log('✔ Selenium & Chromedriver successfully updated');
+// });
 
 function padLeft (count) { // theregister.co.uk/2016/03/23/npm_left_pad_chaos/
   return count < 10 ? '0' + count : count.toString();
